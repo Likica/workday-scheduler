@@ -3,7 +3,7 @@
 - A simple calendar application that allows a user to save events for each hour of the day. 
 This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 ### Link to deployed application on GitHub Pages
-* https://github.com/Likica/workday-scheduler/deployments/activity_log?environment=github-pages
+* https://likica.github.io/workday-scheduler/
 
 ## This is landing page for workday-scheduler
 <img src="assets/images/WDS_landing_pg.png">
