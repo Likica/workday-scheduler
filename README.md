@@ -1,24 +1,18 @@
 # workday-scheduler
-## Weekly Challenge Work Day Scheduler
-
-* Create a simple calendar application that allows a user to save events for each hour of the day. 
+## Weekly Challenge Work Day Scheduler Intro
+- A simple calendar application that allows a user to save events for each hour of the day. 
 This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
-#### User Story
-- AS AN employee with a busy schedule
-- I WANT to add important events to a daily planner
-- SO THAT I can manage my time effectively
+### Link to deployed application on GitHub Pages
+* https://github.com/Likica/workday-scheduler/deployments/activity_log?environment=github-pages
 
-### Acceptance Criteria
-- GIVEN I am using a daily planner to create a schedule
-- WHEN I open the planner
-- THEN the current day is displayed at the top of the calendar
-- WHEN I scroll down
-- THEN I am presented with time blocks for standard business hours
-- WHEN I view the time blocks for that day
-- THEN each time block is color-coded to indicate whether it is in the past, present, or future
-- WHEN I click into a time block
-- THEN I can enter an event
-- WHEN I click the save button for that time block
-- THEN the text for that event is saved in local storage
-- WHEN I refresh the page
-- THEN the saved events persist
+## This is landing page for workday-scheduler
+<img src="assets/images/WDS_landing_pg.png">
+
+* Title with current date displayed
+<img src="assets/images/Title_currentDay.png">
+
+* Task area where user can enter their daily task in apppropriate slot for the time of their work day and save the task
+<img src="assets/images/Task_area.png">
+
+## Contribution
+Made with ❤️ by Fahrija Wyroski
