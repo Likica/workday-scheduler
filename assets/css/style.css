@@ -11,6 +11,7 @@ body {
     color: #000000;
     border-left: 1px solid black;
     padding: 10px;
+    border: 1px solid #000000;
   }
   
   .jumbotron {
@@ -30,9 +31,11 @@ body {
 .placeholder {
   height: 100%;
 }
+
+/* timeblock ?*/
   .row {
     white-space: pre-wrap;
-    height: 550px;
+    height: 55px;
     border-top: 1px solid rgb(255, 255, 255);
   }
   
