@@ -21,8 +21,6 @@ document.getElementById('currentDay').innerHTML = date;
 // begin function for scheduling tasks
 function runMyScheduler() {
     // set up localStorage
-    // $('#currentDay').text(moment().format('dddd, MMMM Do'));
-
     $('.time-block').each(function () {
         var id = $(this).attr('id');
         var textarea = localStorage.getItem(id);
@@ -64,72 +62,7 @@ function colorizeTimeblocks() {
     })
 }
 colorizeTimeblocks();
-// $timeBlocks.each(function () {
-//     var $thisBlock = $(this);
-//     var thisBlockTime = parseInt($thisBlock.attr('time'));
-//     var todoObj = {
-//         time: thisBlockTime,
-//         text: '',
-//     }
-//     toDoItems.push(todoObj);
-// });
-// add localStorage
-//     localStorage.setItem('todos', JSON.stringify(toDoItems));
-// }
-
-// // Add date,time and formatting for tasks
-// var curentDay = moment().format('dddd, MMMM Do');
-// var currentTime = moment().format('H');
-
-// var colorTimeBlocks = function () {
-//     var currentHour = moment().hour()
-
-//     for (var i = 6; i < 15; i++) {
-//         var tasks = $('task -' + i)
-//     } if (currentHour > i) {
-//         $(tasks).addClass('past').removeClass('present future');
-//     }
-//     else if
-//         (currentHour === i) {
-//         $(tasks).addClass('present').removeClass('past future');;
-//     } else {
-//         $(tasks).addClass('future').removeClass('present past');;
-//     }
-// }
-
-// // Colorize time blocks
-// function colorizeTimeBlocks() {
-//     $timeBlocks.each(function () {
-//         var $thisBlock = $(this);
-//         var thisBlockTime = parseInt($thisBlock.attr('time'));
-
-//         // if task is in past time, remove other classes and display only past classs (color)
-//         if (thisBlockTime < currentTime) {
-//             $thisBlock.addClass('past').removeClass('present future');
-//         }
-//         // if task is in present time, remove other classes and display only present classs (color)
-//         else if (thisBlockTime = currentTime) {
-//             $thisBlock.addClass('present').removeClass('past future');
-//         }
-//         // if task is in future time, remove other classes and display only future classs (color)
-//         else if (thisBlockTime > currentTime) {
-//             $thisBlock.addClass('future').removeClass('past present');
-//         }
-//     });
-
-// }
-// function runScheduler() {
-//     toDoItems = localStorage.getItem('todos');
-//     toDoItems = JSON.parse(toDoItems);
-
-//     for (var i = 0; i < toDoItems; i++) {
-//         var itemTime = toDoItems[i].time;
-//         var itemText = toDoItems[i].text;
-
-//         $('[time=' + itemTime + ']').children('textarea').val(itemText);
-//     }
-// }
-
+//saveBtn Handler
 function saveBtnHandler() {
 
     var $thisBlock = $(this).parent();
