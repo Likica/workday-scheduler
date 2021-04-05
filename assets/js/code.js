@@ -35,6 +35,15 @@ function runMyScheduler() {
 }
 runMyScheduler();
 
+// saveBtn function & localStorage
+var saveBtn = $('.saveBtn');
+
+saveBtn.on('click', function () {
+    var time = $(this).parent().attr('id');
+    var textarea = $(this).siblings('.textarea').val();
+
+    localStorage.setItem(time, textarea);
+});
 
 // colorize timeblocks
 function colorizeTimeblocks() {
@@ -108,6 +117,45 @@ colorizeTimeblocks();
 //         }
 //     });
 
+// }
+// function runScheduler() {
+//     toDoItems = localStorage.getItem('todos');
+//     toDoItems = JSON.parse(toDoItems);
 
+//     for (var i = 0; i < toDoItems; i++) {
+//         var itemTime = toDoItems[i].time;
+//         var itemText = toDoItems[i].text;
+
+//         $('[time=' + itemTime + ']').children('textarea').val(itemText);
+//     }
+// }
+
+function saveBtnHandler() {
+
+    var $thisBlock = $(this).parent();
+
+    var timeToUpdate = $(this).parent().attr('time');
+    var itemToAdd = (($(this).parent()).children('textarea')).val();
+
+    for (var i = 0; i < toDoItems.length; i++) {
+        if (toDoItems[i].time == timeToUpdate) {
+            toDoItems[i].text = itemToAdd;
+        }
+    }
+    localStorage.setItem('todos', JSON.stringify(toDoItems));
+    runMyScheduler();
+}
+
+$(document).ready(function () {
+    colorizeTimeblocks();
+    runMyScheduler();
+
+    if (!localStorage.getItem('todos')) {
+        runMyScheduler();
+    }
+
+    // $currentDay.text(currentDay);
+    $taskArea.on('click', 'button', saveBtnHandler)
+});
 
 
